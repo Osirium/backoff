@@ -20,8 +20,6 @@ pep8:
 flake8:
 ifeq ($(PY_GTE_34),1)
 	@flake8 backoff tests
-else ifeq ($(PY_GTE_27),1)
-	@flake8 --exclude tests/python34,backoff/_async.py backoff tests
 else
 	@echo 'Not running flake8 for Python < 2.7'
 endif
